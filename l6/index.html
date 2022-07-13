@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-6= Variables & Data types in C</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="side-div">
+        <div class="group">
+            <div class="box">
+                <a href="../index.html">
+                    <img style="height: 40px;" src="../images/home.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="group">
+            <div class="box">
+                <a href="#primitive-types"></a>
+            </div>
+            <ul class="box">
+                <li>
+                    <a href="#numbers"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="right-box">
+        <div class="content-box">
+            <h1>Variables & Data Types in C</h1>
+            <p>
+                Each type of variable contains specific type of data in it.
+                <br>variables are nothing more than simple names given to a specific space in memory for reservation
+            </p>
+            <div class="inside-content">
+                <h2>Declaration</h2>
+                <p>We cannot declare a variable without specifying its data type. The data type of a variable depends on what we want to store in the variable and how much space we want it to hold. The syntax for declaring a variable is simple:
+                    <br>data_type &nbsp; &nbsp;variable_name;
+                    <br>or
+                    <br>data_type variable_name = value;
+                </p>
+            </div>
+            <div class="inside-content">
+                <h2>Rules for defining a variable in C</h2>
+                <ul>
+                    <li>Can contain alphabets, digits, and underscore (_)</li>
+                    <li>A variable name can start with an alphabet and underscore only</li>
+                    <li>Can't start with a digit</li>
+                    <li>No whitespace & reserved keywords is allowed</li>
+                    <li>Valid variable names: int harry, float harry123, char _harry34</li>
+                    <li>Invalid variavle names: $harry, int 77harry, char long;</li>
+                </ul>
+            </div>
+            <div class="inside-content">
+                <h2>Data Types in C</h2>
+                <ul>
+                    <li>Basic Data Type: int, char, float, double</li>
+                    <li>Derived Data Type: array, pointer, structure, uion</li>
+                    <li>Enumeration Data Type: enum</li>
+                    <li>Void Data Type: void</li>
+                </ul>
+            </div>
+            <div class="inside-content">
+                <h2>Data Types: Size (32-bit architecture)</h2>
+                <table>
+                    <tbody>
+                        <tr style="height: 96px;">
+                            <td style="width: 26.054%; height: 96px;" scope="row">
+                                <p><strong>DATA TYPE</strong></p>
+                            </td>
+                            <td style="width: 28.4992%; height: 96px;">
+                                <p><strong>MEMORY (BYTES)</strong></p>
+                            </td>
+                            <td style="width: 45.3626%; height: 96px;">
+                                <p><strong>RANGE</strong></p>
+                            </td>
+
+                        </tr>
+                        <tr style="height: 96px;">
+                            <td style="width: 26.054%; height: 96px;">
+                                <p>Char</p>
+                            </td>
+                            <td style="width: 28.4992%; height: 96px;">
+                                <p>1 byte = 8 bits</p>
+                            </td>
+                            <td style="width: 45.3626%; height: 96px;">
+                                <p>-128 to 127</p>
+                            </td>
+
+                        </tr>
+                        <tr style="height: 96px;">
+                            <td style="width: 26.054%; height: 96px;">
+                                <p>signed char</p>
+                            </td>
+                            <td style="width: 28.4992%; height: 96px;">
+                                <p>1</p>
+                            </td>
+                            <td style="width: 45.3626%; height: 96px;">
+                                <p>-128 to 127</p>
+                            </td>
+
+                        </tr>
+                        <tr style="height: 96px;">
+                            <td style="width: 26.054%; height: 96px;">
+                                <p>unsigned char</p>
+                            </td>
+                            <td style="width: 28.4992%; height: 96px;" scope="rowgroup">
+                                <p>1</p>
+                            </td>
+                            <td style="width: 45.3626%; height: 96px;">
+                                <p>0 to 255</p>
+                            </td>
+
+                        </tr>
+                        <tr style="height: 97px;">
+                            <td style="width: 26.054%; height: 97px;">
+                                <p>short int</p>
+                            </td>
+                            <td style="width: 28.4992%; height: 97px;">
+                                <p>2</p>
+                            </td>
+                            <td style="width: 45.3626%; height: 97px;">
+                                <p>-32,768 to 32,767</p>
+                            </td>
+
+                        </tr>
+                        <tr style="height: 97px;">
+                            <td style="width: 26.054%; height: 97px;">
+                                <p>unsigned short int</p>
+                            </td>
+                            <td style="width: 28.4992%; height: 97px;">
+                                <p>2</p>
+                            </td>
+                            <td style="width: 45.3626%; height: 97px;">
+                                <p>0 to 65,535</p>
+                            </td>
+
+                        </tr>
+                        <tr style="height: 97px;">
+                            <td style="width: 26.054%; height: 97px;">
+                                <p>unsigned int</p>
+                            </td>
+                            <td style="width: 28.4992%; height: 97px;">
+                                <p>4</p>
+                            </td>
+                            <td style="width: 45.3626%; height: 97px;">
+                                <p>0 to 65,535</p>
+                            </td>
+
+                        </tr>
+                        <tr style="height: 97px;">
+                            <td style="width: 26.054%; height: 97px;">
+                                <p>int</p>
+                            </td>
+                            <td style="width: 28.4992%; height: 97px;">
+                                <p>2</p>
+                            </td>
+                            <td style="width: 45.3626%; height: 97px;">
+                                <p>--32,768 to 32,767</p>
+                            </td>
+
+                        </tr>
+                        <tr style="height: 97px;">
+                            <td style="width: 26.054%; height: 97px;">
+                                <p>long int</p>
+                            </td>
+                            <td style="width: 28.4992%; height: 97px;">
+                                <p>4</p>
+                            </td>
+                            <td style="width: 45.3626%; height: 97px;">
+                                <p>-2,147,483,648 to 2,147,483,647</p>
+                            </td>
+
+                        </tr>
+                        <tr style="height: 98px;">
+                            <td style="width: 26.054%; height: 98px;">
+                                <p>unsigned long int</p>
+                            </td>
+                            <td style="width: 28.4992%; height: 98px;">
+                                <p>4</p>
+                            </td>
+                            <td style="width: 45.3626%; height: 98px;">
+                                <p>0 to 4,294,967,295</p>
+                            </td>
+
+                        </tr>
+                        <tr style="height: 98px;">
+                            <td style="width: 26.054%; height: 98px;">
+                                <p>float</p>
+                            </td>
+                            <td style="width: 28.4992%; height: 98px;">
+                                <p>4</p>
+                            </td>
+                            <td style="width: 45.3626%; height: 98px;">&nbsp;</td>
+
+                        </tr>
+                        <tr style="height: 98px;">
+                            <td style="width: 26.054%; height: 98px;">
+                                <p>double</p>
+                            </td>
+                            <td style="width: 28.4992%; height: 98px;">
+                                <p>8</p>
+                            </td>
+                            <td style="width: 45.3626%; height: 98px;">&nbsp;</td>
+
+                        </tr>
+                        <tr style="height: 114px;">
+                            <td style="width: 26.054%; height: 114px;">
+                                <p>long double</p>
+                            </td>
+                            <td style="width: 28.4992%; height: 114px;">
+                                <p>10</p>
+                            </td>
+                            <td style="width: 45.3626%; height: 114px;">
+                                <p><br><br></p>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="inside-content">
+                    <h3>Code for finding the size of data types</h3>
+                    <div class="inside-content">
+                        <p>
+                            #include &lt;stdio.h&gt;
+                            <br>int main() {
+                            <br>printf("%lu\n", sizeof(int));
+                            <br> printf("%lu\n", sizeof(char));
+                            <br>printf("%lu\n", sizeof(long));
+                            <br>// 'lu' is used for unsigned long
+                            <br>return 0;
+                            <br>}
+                        </p>
+                    </div>
+                    <div class="inside-content">
+                        <p>
+                            output: <br> 4
+                            <br>1
+                            <br>4
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+</html>
+
+</html>

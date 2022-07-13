@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-36 = Array reversal exercise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="side-div">
+        <div class="group">
+            <div class="box">
+                <a href="../index.html">
+                    <img style="height: 40px;" src="../images/home.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="group">
+            <div class="box">
+                <a href="#primitive-types"></a>
+            </div>
+            <ul class="box">
+                <li>
+                    <a href="#numbers"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="right-box">
+        <div class="content-box">
+            <h1>Array reversal exercise</h1>
+            <p>Reverse the array if arr[]={1,2,3,4} then the output should be {4,3,2,1}</p>
+            <div class="in">
+                <h3>I was just messing around with the code and accidently my code works here it is</h3>
+                <button class="accordion">code</button>
+                <div class="panel">
+                    <p>
+                        #include &lt;stdio.h&gt;
+                        <br> void arrayRev(int size, int arr[size])
+                        <br> {
+                        <br> // copying reverse of an array to another array
+                        <br> int store=size-1;
+                        <br> int arr2[size];
+                        <br> for (int i = 0; i &lt; size; i++)
+                        <br> {
+                        <br> arr2[store]= arr[i];
+                        <br> store--;
+                        <br>
+                        <br> }
+                        <br> for (int i = 0; i &lt; size; i++)
+                        <br> {
+                        <br> printf("%d,", arr2[i]);
+                        <br> }
+                        <br>
+                        <br> // int arr2[];
+                        <br> }
+                        <br> int main()
+                        <br> {
+                        <br> int arr[] = {1, 2, 3, 4, 5, 6, 67};
+                        <br> int size = sizeof(arr) / sizeof(int);
+                        <br> // printf("%d", size);
+                        <br> arrayRev(size, arr);
+                        <br> return 0;
+                        <br> }
+                    </p>
+                </div>
+            </div>
+            <div class="in">
+                <button class="accordion">Harry code</button>
+                <div class="panel">
+                    <p>
+                        #include &lt;stdio.h&gt;
+                        <br> void arrayRev(int arr[])
+                        <br> {
+                        <br> // we will do swaping- will swap 0 index with last index then so on
+                        <br> int temp;
+                        <br> for (int i = 0; i &lt; 7 / 2; i++)
+                        <br> {
+                        <br> // swap item arr[i] with item arr[6-i]
+                        <br> temp = arr[i];
+                        <br> arr[i] = arr[6 - i];
+                        <br> arr[6 - i] = temp;
+                        <br> // if this runs for whole then it won't change anything cuse it will redo it.
+                        <br> // so we have to stop it int middle for that we do i&lt;7/2
+                        <br> }
+                        <br> }
+                        <br> void printArr(int arr[])
+                        <br> {
+                        <br> for (int i = 0; i &lt; 7; i++)
+                        <br> {
+                        <br> printf("The value of element %d is %d\n", i, arr[i]);
+                        <br> }
+                        <br> }
+                        <br> int main()
+                        <br> {
+                        <br> int arr[] = {1, 2, 3, 4, 5, 6, 67};
+                        <br> printf("\n Before reversing the array\n");
+                        <br> printArr(arr);
+                        <br> arrayRev(arr);
+                        <br> printf("\n After reversing the array\n");
+                        <br> printArr(arr);
+                        <br>
+                        <br> return 0;
+                        <br> }
+                    </p>
+                </div>
+                <p>In my program I have used two arrays but here harry have used only one array and have done swapping</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

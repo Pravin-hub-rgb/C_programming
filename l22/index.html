@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-22 = Unit and conversions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="side-div">
+        <div class="group">
+            <div class="box">
+                <a href="../index.html">
+                    <img style="height: 40px;" src="../images/home.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="group">
+            <div class="box">
+                <a href="#primitive-types"></a>
+            </div>
+            <ul class="box">
+                <li>
+                    <a href="#numbers"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="right-box">
+        <div class="content-box">
+            <h1>Units and conversions</h1>
+            <div class="in">
+                <p>
+                    /* Exercise of Units and Conversions
+                    <br> kms to miles
+                    <br>inches to foot
+                    <br>cms to inches
+                    <br>pound to kgs
+                    <br>inches to meters
+                    <br> */
+                </p>
+            </div>
+            <div class="in">
+                <button class="accordion">closest I can get : code</button>
+                <div class="panel">
+                    <p>
+                        #include &lt;stdio.h&gt;
+                        <br>
+                        <br> void convert(int com)
+                        <br> {
+                        <br> while (com != 0)
+                        <br> {
+                        <br> int num;
+                        <br> // float fvalue;
+                        <br> if (com == 1)
+                        <br> {
+                        <br> printf("Enter Kilometers : ");
+                        <br> scanf("%d\n", &num);
+                        <br> // fvalue = num * 0.62137119;
+                        <br> printf("%d kms is %f miles", num, num * 0.62137119);
+                        <br> break;
+                        <br> }
+                        <br> else if (com == 2)
+                        <br> {
+                        <br> printf("Enter inches : ");
+                        <br> scanf("%d\n", &num);
+                        <br> printf("%d inches is %f foot", num, num/12);
+                        <br> break;
+                        <br> }
+                        <br> else if(com == 3)
+                        <br> {
+                        <br> printf("Enter cms : ");
+                        <br> scanf("%d\n", &num);
+                        <br> printf("%d cms is %f inches", num, num*0.39);
+                        <br> break;
+                        <br> }
+                        <br> else if(com == 4)
+                        <br> {
+                        <br> printf("Enter pound : ");
+                        <br> scanf("%d\n", &num);
+                        <br> printf("%d pound is %f kgs", num, num*0.45359237);
+                        <br> break;
+                        <br> }
+                        <br> else if(com == 5)
+                        <br> {
+                        <br> printf("Enter inches : ");
+                        <br> scanf("%d\n", &num);
+                        <br> printf("%d inches is %f meters", num, num*0.0254);
+                        <br> break;
+                        <br> }
+                        <br> else
+                        <br> {
+                        <br> printf("The value you have entered doesn't comply with any conversion program.");
+                        <br> break;
+                        <br>}
+                        <br> }
+                        <br> }
+                        <br>
+                        <br> int main()
+                        <br>{
+                        <br> int com;
+                        <br> printf("kms to miles - type 1 : \n inches to foot - type 2 : \n cms to inches - type 3 : \n pound to kgs = - type 4 : \n inches to meters - type 5 \n To quit - type 0 : ");
+                        <br> scanf("%d", &com);
+                        <br> convert(com);
+                        <br> return 0;
+                        <br> }
+                    </p>
+                </div>
+            </div>
+            <div class="in">
+                <h3>Harry code</h3>
+                <button class="accordion">Code</button>
+                <div class="panel">
+                    <p>
+                        <br> char input;
+                        <br> float kmsToMiles = 0.621371;
+                        <br> float inchesToFoot = 0.0833333;
+                        <br> float cmsToInches = 0.393701;
+                        <br> float poundToKgs = 0.453592;
+                        <br> float inchesToMeters = 0.0254;
+                        <br> float first, second;
+                        <br>
+                        <br> while (1)
+                        <br> {
+                        <br> printf("Enter the input character. q to quit\n 1. kms to miles\n 2. inches to foot\n 3. cms to inches\n 4. pound to kgs\n 5. inches to meters\n");
+                        <br>
+                        <br> scanf(" %c", &input);
+                        <br> // printf("The character is '%c'", input);
+                        <br> switch (input)
+                        <br> {
+                        <br> case 'q':
+                        <br> printf("Quitting the program...");
+                        <br> goto end;
+                        <br> break;
+                        <br>
+                        <br> case '1':
+                        <br> printf("Enter quantity in terms of first unit\n");
+                        <br> scanf("%f", &first);
+                        <br> second = first * kmsToMiles;
+                        <br> printf("%.2f Kms is equal to %.2f Miles\n\n\n", first, second);
+                        <br> break;
+                        <br>
+                        <br> case '2':
+                        <br> printf("Enter quantity in terms of first unit\n");
+                        <br> scanf("%f", &first);
+                        <br> second = first * inchesToFoot;
+                        <br> printf("%f Inches is equal to %f Foot\n", first, second);
+                        <br> break;
+                        <br>
+                        <br> case '3':
+                        <br> printf("Enter quantity in terms of first unit\n");
+                        <br> scanf("%f", &first);
+                        <br> second = first * cmsToInches;
+                        <br> printf("%f Cms is equal to %f Inches\n", first, second);
+                        <br> break;
+                        <br>
+                        <br> case '4':
+                        <br> printf("Enter quantity in terms of first unit\n");
+                        <br> scanf("%f", &first);
+                        <br> second = first * poundToKgs;
+                        <br> printf("%f Pounds is equal to Kgs %f \n", first, second);
+                        <br> break;
+                        <br>
+                        <br> case '5':
+                        <br> printf("Enter quantity in terms of first unit\n");
+                        <br> scanf("%f", &first);
+                        <br> second = first * inchesToMeters;
+                        <br> printf("%f inches is equal to %f meters \n", first, second);
+                        <br> break;
+                        <br>
+                        <br> default:
+                        <br> printf("In default now");
+                        <br> break;
+                        <br> }
+                        <br> }
+                        <br> end:
+                        <br>
+                        <br> return 0;
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

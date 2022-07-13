@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>L-4 = Basic Structure of C Program</title>
+    <link rel="stylesheet" href="../styleLesson.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <div class="logo_name">C Programming</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="../index.html">
+                    <i class='bx bxs-home'></i>
+                    <span class="links_name">Home</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="#t1">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">&lt;stdio.h&gt;</span>
+                </a>
+            </li>
+            <li>
+                <a href="#t2">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">int main()</span>
+                </a>
+            </li>
+            <li>
+                <a href="#t3">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">printf()</span>
+                </a>
+            </li>
+            <li>
+                <a href="#t4">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">scanf()</span>
+                </a>
+            </li>
+            <li>
+                <a href="#t5">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">return 0</span>
+                </a>
+            </li>
+            <li>
+                <a href="#t6">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">// comment</span>
+                </a>
+            </li>
+            <li>
+                <a href="#t7">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Compiling steps</span>
+                </a>
+            </li>
+        </ul>
+        <div class="content">
+            <div class="func">
+                <div class="func_details">
+                    <div class="actionPN">
+                        <div class="name">
+                            <a class="actionA" href="../l5/index.html">
+                                <span>Next Topic</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <i class='bx bx-right-arrow-alt' id="doit"></i>
+            </div>
+            <div class="func">
+                <div class="func_details">
+                    <div class="actionPN">
+                        <div class="name">
+                            <a class="actionA" href="../l3/index.html">
+                                <span>Previous Topic</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <i class='bx bx-left-arrow-alt' id="doit"></i>
+            </div>
+        </div>
+    </div>
+    <div class="home_content">
+        <div class="content-box">
+            <h1>Basic Structure of C Program</h1>
+            <p>
+                Some structural part of the code
+                <ul>
+                    <li>Pre-processor commands</li>
+                    <li>Functions</li>
+                    <li>Variables</li>
+                    <li>Statement</li>
+                    <li>Expressions</li>
+                    <li>Comments</li>
+                </ul>
+            </p>
+            <div class="inside-content">
+                <h2>Code</h2>
+                <p>
+
+                    #include &lt;stdio.h&gt;
+                    <br>int main()
+                    <br>{
+                    <br>&nbsp;&nbsp;int a, b;
+                    <br>&nbsp;&nbsp;printf("Enter no. a\n");
+                    <br>&nbsp;&nbsp;scanf("%d", &a);
+                    <br>
+                    <br>&nbsp;&nbsp;printf("Enter no. b\n");
+                    <br>&nbsp;&nbsp;scanf("%d, &b");
+                    <br>
+                    <br>&nbsp;&nbsp;printf("The sum is %d\n"; a+b); <br> return 0;
+                    <br>}
+                </p>
+            </div>
+            <div class="inside-content" id="t1">
+                <h2>&lt;stdio.h&gt;</h2>
+                <p>
+                    #include &lt;stdio.h&gt;&rarr; Preprosessor command <br> Tells the compiler to include a file named 'stdio.h'
+                    <br> Any line starting with # represents a preprocessing command. It tells our program that before its execution, it must include the stdio.h named file in it because we are using some of the commands or codes from this file. <br>                    For example, if our programs needs mathematical operations of high level then we must include: #include &lt;math.h&gt; It helps us to use the code from math.h file for the calculations in our programs. </p>
+            </div>
+            <div class="inside-content" id="t2">
+                <h2>int main()</h2>
+                <p>This is a function
+                    <br>We use function to distribute a program in parts.
+                    <br>Its a special type of func. from where the execution of program starts
+                    <br>Every function has a return value &rarr; Its a (int) integer which main function will return
+                    <br>&rarr; Whenever we call any function so we get a returning value
+                    <br>&rarr;Now the 'main' function calls another functions and those functions returns a value which is used by main function
+                </p>
+            </div>
+            <div class="inside-content">
+                <h2>int a, b;</h2>
+                <p>
+                    Here we are <b>initializing</b> two variable as integers. <br>Initializing with integer means that we can store integer values in it. If we would have initialized them with char then we could have stored character values in it such
+                    as a, b, c, d, etc.
+                </p>
+            </div>
+            <div class="inside-content" id="t3">
+                <h2>printf("Enter no. a\n")</h2>
+                <p>This is simply a <b>print statement</b></p>
+                <p>Its another function which we are using from stdio.h header file, we included 'stdio.h' just to use printf function. By using this function we can print desired output in console. <br>'\n' is <b>new line character here</b></p>
+            </div>
+            <div class="inside-content" id="t4">
+                <h2>scanf("%d", &a);</h2>
+                <p>
+                    scanf is used to take inputs from the user. Here &a gives the address of variable “a” to store the user's given value. %d notifies that the value should be of integer type.
+                </p>
+            </div>
+            <div class="inside-content" id="t5">
+                <h2>return 0;</h2>
+                <p>we need a return value for a function. The function we created was of int type so it is returning 0. Return 0 means that the function is working perfectly. <br> Note: Return statement and function type should be same.
+                </p>
+            </div>
+            <div class="inside-content" id="t6">
+                <h2>//This is a comment</h2>
+                <p>
+                    We write comments by using the double slash sign (//). Comments are to notify other programmers the working of the code at specific intervals or we write them for our-self. They do not have any effect on the written program.
+                </p>
+            </div>
+        </div>
+        <div class="content-box" id="t7">
+            <h2>The steps which are taken by compiler to compile a program</h2>
+            <p>
+                Preprocessing &rarr; compilation &rarr; assembly &rarr; linking
+                <br>1- Preprocessing &rarr; Here the comments are removed from the program.
+                <br>all the #include files which are written in a program there content are placed in separate file
+                <br>&rarr; macros expand
+                <br>&rarr; the preprocessed output is stored in '.i' file
+                <br><br><br> 2- Compilation &rarr; '.i' file is converted into assembly instruction and saved as '.s' extension
+                <br><br><br> 3- Assembly &rarr; '.i' file where assembly language is written should be converted into machine level instruction so that CPU can understand, '.o' extension file can't be opened.
+                <br><br><br> 4- Linking &rarr; All the assembly files are sumed up and made into a executable file.
+            </p>
+        </div>
+    </div>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

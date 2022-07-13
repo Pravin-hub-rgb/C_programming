@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-11 = What is Coding & C Programming Language</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="side-div">
+        <div class="group">
+            <div class="box">
+                <a href="../index.html">
+                    <img style="height: 40px;" src="../images/home.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="group">
+            <div class="box">
+                <a href="#primitive-types"></a>
+            </div>
+            <ul class="box">
+                <li>
+                    <a href="#numbers"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="right-box">
+        <div class="content-box">
+            <h1>Switch Case Statements</h1>
+            <p>Switch case are alternative of if else if ladder</p>
+            <div class="inside-content">
+                <h2>Why do we need a Switch case?</h2>
+                <p>
+                    There is one problem with the if statement: the program's complexity increases whenever the number of if statements increases. If we use multiple if-else statements in the program, the code might become difficult to read and comprehend. Sometimes it also
+                    even confuses the developer whom himself wrote the program. Using the switch statement is the solution of this problem.
+                </p>
+            </div>
+            <div class="inside-content">
+                <h2>syntax</h2>
+                <div class="in">
+                    <p>
+                        int a = 2;
+                        <br>switch(a) {
+                        <br> case 2:
+                        <br> break;
+                        <br>//after checking case 2 it won't go to case 3 instead it will exit and it will not print the default case.
+                        <br>printf("value is 2");
+                        <br> case 3:
+                        <br> printf("value is 3");
+                        <br> default :
+                        <br> printf("nothing matched");
+                        <br> }
+                    </p>
+                </div>
+            </div>
+            <div class="inside-content">
+                <h2>Rules for Switch Statement</h2>
+                <ul>
+                    <li>The test expression of Switch must be an int or char.</li>
+                    <li>The value of the case should be an integer or character</li>
+                    <li>Case must come inside swtich</li>
+                    <li>Break is not necessary</li>
+                    <li>The case label values inside the switch should be unique.</li>
+                    <li>int x; &check; float x; &cross;</li>
+                </ul>
+            </div>
+            <div class="inside-content">
+                <h2> Difference between a switch and if:</h2>
+                <ul>
+                    <li>
+                        Switch statements cannot evaluate float conditions, and the test expression can be an integer or a character, whereas if statements can evaluate float conditions.
+                    </li>
+                    <li>
+                        The switch statement cannot evaluate relational operators i.e., they are not allowed in switch statements, whereas if statements can evaluate relational operators.
+                    </li>
+                    <li>
+                        Cases in the switch can never have variable expressions; for example, we cannot write case a +3 :
+                    </li>
+                </ul>
+            </div>
+            <div class="inside-content">
+                <h2>Example Code</h2>
+                <div class="in">
+                    <h3>Simple Switch</h3>
+                    <button class="accordion">Code</button>
+                    <div class="panel">
+                        <p>
+                            #include &lt;stdio.h&gt;
+                            <br>
+                            <br> int main() {
+                            <br> int i = 9;
+                            <br>
+                            <br>switch (i) {
+                            <br> case 5:
+                            <br>printf("Value is 7");
+                            <br> break;
+                            <br>
+                            <br>case 0:
+                            <br>printf("Value is 8");
+                            <br> break;
+                            <br>
+                            <br>case 9:
+                            <br>printf("Value is 9");
+                            <br> break;
+                            <br>
+                            <br>default:
+                            <br>printf("Value is not present");
+                            <br> break;
+                            <br>}
+                            <br>return 0;
+                            <br>}
+                        </p>
+                    </div>
+                </div>
+                <div class="in">
+                    <h3>Nested Switch</h3>
+                    <button class="accordion">Code</button>
+                    <div class="panel">
+                        <p>
+                            <br> switch(expression 1)
+                            <br>{
+                            <br>Case 1:
+                            <br>printf(“Switch Statement 1”);
+                            <br>
+                            <br>switch(expression 2)
+                            <br>{
+                            <br>Case 1:
+                            <br>printf(“Switch Statement 2”);
+                            <br> Break;
+                            <br>
+                            <br>Case 2:
+                            <br> Do this;
+                            <br>}
+                            <br>break;
+
+                            <br> Case 2:
+                            <br> Do this;
+                            <br>}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

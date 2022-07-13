@@ -1,0 +1,361 @@
+/* Google Font CDN Link */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    /* margin: 0; */
+    /* padding: 0; */
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --black-color: #11101d;
+    --white-color: #fff;
+    --sky-color: #E4E9F7;
+    --light-black: #1d1b31;
+}
+
+*/::selection {
+    color: var(--white-color);
+    background: var(--black-color);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: var(--black-color);
+    padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active {
+    width: 240px;
+}
+
+.sidebar .logo_content .logo {
+    color: var(--white-color);
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.1s ease;
+}
+
+.sidebar.active .logo_content .logo {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.logo_content .logo .logo_name {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: var(--white-color);
+    top: 6px;
+    left: 50%;
+    font-size: 22px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar ul li {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 5px 0;
+    list-style: none;
+    line-height: 50px;
+}
+
+.sidebar ul li input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: #1d1b31;
+    padding-left: 50px;
+    font-size: 18px;
+    color: var(--white-color);
+}
+
+.sidebar ul li .bx-search {
+    position: relative;
+    z-index: 99;
+    color: var(--white-color);
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+
+.sidebar ul li .bx-search:hover {
+    background: var(--white-color);
+    color: #1d1b31;
+}
+
+.sidebar ul li a {
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 12px;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+    color: var(--black-color);
+    background: var(--white-color);
+}
+
+.sidebar ul li i {
+    font-size: 18px;
+    font-weight: 400;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.sidebar .links_name {
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.sidebar.active .links_name {
+    transition: 0s;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar .content {
+    position: absolute;
+    color: var(--white-color);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar .content .func {
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .content .func {
+    background: var(--light-black);
+}
+
+.content .func .func_details {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .func .func_details {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.actionNP {
+    margin-left: 10px;
+}
+
+.actionA {
+    color: white;
+    display: block;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 12px;
+    margin: 0 auto;
+    padding: 4px 30px;
+    border: 1px solid white;
+    transition: all 0.2s ease;
+}
+
+.actionA:hover {
+    background-color: rgba(255, 255, 255, 0.13);
+}
+
+.func_details .name {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#doit {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .func #doit {
+    left: 80%;
+    background: none;
+}
+
+.home_content {
+    position: absolute;
+    /* height: 100%; */
+    width: calc(100% - 78px);
+    left: 78px;
+    background: var(--sky-color);
+    padding: 20px;
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+    transition: all 0.5s ease;
+}
+
+.sidebar.active~.home_content {
+    z-index: 100;
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+
+/* contect-box  */
+
+.content-box {
+    background-color: rgba(0, 180, 216, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* ******** Local Stuff *************** */
+
+.inside-content {
+    background-color: rgba(255, 255, 255, 0.377);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.in {
+    background-color: rgba(0, 0, 0, 0.26);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.wh {
+    background-color: rgba(255, 255, 255, 0.363);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+
+body {
+    background-color: #F1FFFA;
+    color: #454545;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+
+/* li {
+    font-size: 1.2rem;
+} */
+
+p {
+    font-size: 1.1rem;
+    line-height: 23px;
+}
+
+
+/* **** Accordion **** */
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+.activeA,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+
+/* Style the accordion panel. Note: hidden by default */
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+
+/* **** PART2 ****** */
+
+.part2 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.part2>div {
+    border: 2px solid rgb(100, 0, 0);
+    padding: 8px;
+    width: 45%;
+}

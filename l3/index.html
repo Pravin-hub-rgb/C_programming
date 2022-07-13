@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>L-3 = Install & Configure VS Code with C Compiler</title>
+    <link rel="stylesheet" href="../styleLesson.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <div class="logo_name">C Programming</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="../index.html">
+                    <i class='bx bxs-home'></i>
+                    <span class="links_name">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#t1">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">IDE VS Compiler</span>
+                </a>
+            </li>
+        </ul>
+        <div class="content">
+            <div class="func">
+                <div class="func_details">
+                    <div class="actionPN">
+                        <div class="name">
+                            <a class="actionA" href="../l4/index.html">
+                                <span>Next Topic</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <i class='bx bx-right-arrow-alt' id="doit"></i>
+            </div>
+            <div class="func">
+                <div class="func_details">
+                    <div class="actionPN">
+                        <div class="name">
+                            <a class="actionA" href="../l2/index.html">
+                                <span>Previous Topic</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <i class='bx bx-left-arrow-alt' id="doit"></i>
+            </div>
+        </div>
+    </div>
+    <div class="home_content">
+        <div class="content-box">
+            <h1>Install & Configure VS Code With C Compiler</h1>
+            <p>turbo C and turbo c++ are discontinued</p>
+            <div class="inside-content" id="t1">
+                <h2>Difference between IDE and Compiler</h2>
+                <div class="table">
+                    <div class="tc">
+                        <h3>IDE</h3>
+                        <p>
+                            Integrated Development Environment
+                            <br>&rarr;Here we can do syntax highlighting & syntax checking
+                            <br>&rarr; tells about error in line no.
+                            <br>&rarr;IDE stands for Integrated development environment. It is nothing more than an enhanced version of a text editor that helps you write more efficient and nicer code. It helps to differentiate different parts of your
+                            codes with different colors and notifying you if you are missing some semicolon or bracket at some place by highlighting that area. A lot of IDEs are available such as DEVC++ or Code Blocks but we are going to use VS Code for
+                            this tutorial series.
+                        </p>
+                    </div>
+                    <div class="tc">
+                        <h3>Compiler</h3>
+                        <p>
+                            We have to install it
+                            <br>&rarr;It is used to run the program of any certain language by converting the code into the language that our computer could understand.
+                            <br>&rarr;A compiler is used to run the program of a certain language by converting the code into the language that our computer could understand. Without a compiler we can not run our code. Every programming language is required
+                            a different compiler for its functioning because the syntax of every language is different from the other. There are a lot of compilers available, but we are going to use MinGW for this course because it will fulfill all of
+                            our requirements and also it is recommended by Microsoft itself.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="inside-content">
+                <h2>Code</h2>
+                <p>
+                    #include &lt;stdio.h&gt;
+                    <br>int main ()
+                    <br> { <br> printf("Hello World");
+                    <br> return 0;
+                    <br> }
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

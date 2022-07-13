@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-62 =File I/O in C</title>
+    <link rel="stylesheet" href="../styleLesson.css">
+</head>
+
+<body class="inLesson">
+    <section id="side-div">
+        <div class="group">
+            <div class="box">
+                <a href="../index.html">
+                    <img style="height: 40px;" src="../images/home.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="group">
+            <div class="box">
+                <a href="#"></a>
+            </div>
+            <ul class="box">
+                <li>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="right-box">
+        <div class="content-box">
+            <h1>File I/O in C</h1>
+            <div class="inside-content">
+                <h1>Why do we need a file?</h1>
+                <ul>
+                    <li>Files are used to store data and information
+                        <ul>
+                            <li>Data &rarr; bits of storage</li>
+                            <li>information&rarr; it is made when data is processed and something meaningfull is created</li>
+                        </ul>
+                    </li>
+                    <li>Files are used to read & access data anytime from the hard disk.</li>
+                    <li>Files make it easy for a programmer to access and store content without losing it on program termination</li>
+                </ul>
+                <div class="in">
+                    <h2>Volatile VS Non-volatile memory</h2>
+                    <div class="part2">
+                        <div>
+                            <h3>Volatile Memory</h3>
+                            <ul>
+                                <li>Volatile memory is computer storage that only maintains its data while the device is powered.</li>
+                                <li>The RAM will hold data, programs, and information as long as it has a constant power supply but immediately the power is interrupted all that content is cleared.</li>
+                                <li>The Volatile memory will only hold data temporarily.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Non Volatile Memory</h3>
+                            <ul>
+                                <li>Non-volatile memory is computer memory that can retain the stored information even when not powered.</li>
+                                <li>This type of memory is also referred to as permanent memory since data stored within it can be retrieved even when there is no constant power supply.</li>
+                                <li>It is used for the long-term storage of data.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="in">
+                    <h3>Why do we need files?</h3>
+                    <ul>
+                        <li>When a C program is terminated, the data stored in ram is lost.</li>
+                        <li>Storing in a file will preserve our data even after the program terminates.</li>
+                        <li>RAM is not able to handle quite large amount of data due to its small size relative to the hard disk.</li>
+                        <li>It is easy to transfer data as files.</li>
+                    </ul>
+                </div>
+                <div class="in">
+                    <h3>Types of files</h3>
+                    <ul>
+                        <li>Text files&rarr; stores data in plain text and these files can be opened by text editors. These are human readable</li>
+                        <li>Binary files&rarr; Here the data is stored as 0,1 stream that's why these files are secure and only computer can read these files.</li>
+                    </ul>
+                </div>
+                <div class="in">
+                    <h2>File Operators in C</h2>
+                    <ul>
+                        <li>In C we can perform these high level operations on files:
+                            <ul>
+                                <li>1&rarr; Creating a new file</li>
+                                <li>2&rarr; Opening a file</li>
+                                <li>3&rarr; Closing a file</li>
+                                <li>4&rarr; Reading from and writing to a file.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="inside-content">
+                <h2>File I/O Functions in C</h2>
+                <div class="in">
+                    <h3>Working with files in C</h3>
+                    <ul>
+                        <li>When working with files, we have to declare a pointer of type fILE
+                            <ul>
+                                <li>FILE *ptr = NULL;</li>
+                            </ul>
+                        </li>
+                        <li>This declaration helps us to work with files through C program.</li>
+                    </ul>
+                </div>
+                <div class="in">
+                    <h3>Opening a file - Creating or editing a file</h3>
+                    <ul>
+                        <li>stdio.h contains a function called fopen() for opening files in C.</li>
+                        <li>The syntax for opening a file in standard I/O is:
+                            <ul>
+                                <li>ptr = fopen("fileopen","mode")</li>
+                            </ul>
+                        </li>
+                        <li>For Example:
+                            <ul>
+                                <li>fopen("E:\\Code\\harry.txt","w");</li>
+                                <li>fopen("E:\\Programming\\bhai.bin","rb");</li>
+                            </ul>
+                        </li>
+                        <li>"r" &rarr; for reading</li>
+                        <li>"w" &rarr; for writing over previously written text</li>
+                        <li>"a" &rarr; for writing without removing previously written text in file</li>
+                        <li>"r+" &rarr; for reading and writing</li>
+                        <li>"rb" &rarr; read binary</li>
+                    </ul>
+                    <div class="wh">
+                        <button class="accordion">code</button>
+                        <div class="panel">
+                            <p>
+                                #include &lt;stdio.h&gt;
+                                <br> int main()
+                                <br> {
+                                <br> FILE *ptr=NULL; //this is a good practise
+                                <br> char string[34];
+                                <br> ptr = fopen("myfile.txt","r");
+                                <br> fscanf(ptr,"%s",string); //what this do is takes content till space or new line from file and store it to string variable
+                                <br> printf("Content of this file has :%s\n",string);
+                                <br>
+                                <br> return 0;
+                                <br> }
+                            </p>
+                            <div class="in">
+                                <p>
+                                    Content of this file has :this
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="in">
+                <h3>Closing a file</h3>
+                <ul>
+                    <li>If any file is opened in C program (using fopen()) it needs to be closed</li>
+                    <li>Closing a file is accomplished by the library function fclose()</li>
+                    <li>fclose(fptr); //fptr is the file pointer associated with the file to be closed</li>
+                </ul>
+            </div>
+            <div class="in">
+                <h3>Reading a file</h3>
+                <ul>
+                    <li>In order to read a file, we can use fscanf function.</li>
+                    <li>This function is file version of scanf function.</li>
+                    <li>fscanf expects a file pointer in addition to the other arguments with scanf expects.</li>
+                    <li>We will have to open the file in read mode in order to use this function.</li>
+                </ul>
+            </div>
+            <div class="in">
+                <h3>Writing to a file</h3>
+                <ul>
+                    <li>In order to write to a file, we can use fprintf function.</li>
+                    <li>This function is fiie version of printf function</li>
+                    <li>fprintf expects a file pointer in addition to the other arguments which printf expects</li>
+                    <li>We will have to open the file in write mode in order to use this function.</li>
+                </ul>
+                </ul>
+                <div class="wh">
+                    <button class="accordion">code</button>
+                    <div class="panel">
+                        <p>
+                            #include &lt;stdio.h&gt;
+                            <br> int main()
+                            <br> {
+                            <br> FILE *ptr=NULL;
+                            <br> char string2 [100]="This content was produced by Tutorial64.c";
+                            <br> ptr = fopen("myfile.txt","w");
+                            <br> fprintf(ptr,"%s",string2); //inside the file this string will we inserted
+                            <br> //all the older text got removed and the text stored in string2 was inserted
+                            <br> // ptr = fopen("myfile.txt","a"); // in this mode the text inside string2 will be added in the end to the file
+                            <br>
+                            <br> return 0;
+                            <br> }
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

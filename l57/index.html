@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-57 = Matrix Multiplication Exercise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="side-div">
+        <div class="group">
+            <div class="box">
+                <a href="../index.html">
+                    <img style="height: 40px;" src="../images/home.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="group">
+            <div class="box">
+                <a href="#"></a>
+            </div>
+            <ul class="box">
+                <li>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="right-box">
+        <div class="content-box">
+            <h1>Matrix Multiplication Exercise</h1>
+            <div class="inside-content">
+                <p>
+                    We have to do Matrix Multiplication
+                    <br>ask user no. of rows and columns first matrix and then second matrix.
+                    <br>as we know that two matrix can only be multiplied if the number of columns in the 1st matrix is equal to the rows in the 2nd matrix.
+                    <br>tell user if their matrix can be multiplied or not
+                </p>
+            </div>
+        </div>
+    </section>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

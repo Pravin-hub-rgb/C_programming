@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-60 = Predefined Macros & other pre-processor directives</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="side-div">
+        <div class="group">
+            <div class="box">
+                <a href="../index.html">
+                    <img style="height: 40px;" src="../images/home.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="group">
+            <div class="box">
+                <a href="#"></a>
+            </div>
+            <ul class="box">
+                <li>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="right-box">
+        <div class="content-box">
+            <h1>Predefined Macros & other pre-processor directives</h1>
+            <div class="inside-content">
+                <div class="in">
+                    <h2>Recap - Preprocessor directive</h2>
+                    <ul>
+                        <li><i>Preprocessor</i> is a king of automated editor that modifies a copy of the original source code</li>
+                        <li>The #include directive causes the preprocessor to fetch the contents of some other file to be included in the present file</li>
+                        <li>In C programming there are two common formats for #include:</li>
+                        <li>This file may in turn #include some other file(s) which may in turn do the same</li>
+                        <li>Most commonly #included files have a ".h" extension, indicating that they are header files.</li>
+                        <li>The #define directive is used to "define" preprocessor "variables"</li>
+                    </ul>
+                </div>
+                <div class="in">
+                    <h2>Other C Preprocessor</h2>
+                    <div class="wh">
+                        <h3>#undef</h3>
+                        <p>Undefines a macro or preprocessor variable</p>
+                    </div>
+                    <div class="wh">
+                        <h3>#ifdef</h3>
+                        <p>Returns true if some preprocessor variable or macro is defined</p>
+                    </div>
+                    <div class="wh">
+                        <h3>#ifndef</h3>
+                        <p>Returns true if some preprocessor variable or macro is not defined</p>
+                    </div>
+                    <div class="wh">
+                        <h3>#if</h3>
+                    </div>
+                    <div class="wh">
+                        <h3>#else</h3>
+                    </div>
+                    <div class="wh">
+                        <h3>elif</h3>
+                    </div>
+                    <div class="wh">
+                        <h3>pragma</h3>
+                        <p>it is used to issue some special commands to the compiler</p>
+                    </div>
+                </div>
+                <div class="in">
+                    <h2>Predefined Macros in C</h2>
+                    <ul>
+                        <li><b>__DATE__</b>&rarr; The current date as character literal in "MMM DD YYY" format.</li>
+                        <li><b>__TIME__</b>&rarr; This contains the current time as a character literal in "HH:MM:SS" format.</li>
+                        <li><b>__FILE__</b>&rarr; The current filename as a string literal.</li>
+                        <li><b>__LINE__</b>&rarr; The current line number as a decimal constant.</li>
+                        <li><b>__STDC__</b>&rarr; Defined as 1(one) when the compiler complies with the ANSI standard.</li>
+                    </ul>
+                    <div class="wh">
+                        <h3>__FILE__</h3>
+                        <p>
+                            #include &lt;stdio.h&gt;
+                            <br> int main()
+                            <br> {
+                            <br> printf("File name is %s\n",__FILE__);
+                            <br> return 0;
+                            <br> }
+                        </p>
+                        <div class="in">
+                            <p>
+                                The file name is code.c
+                            </p>
+                        </div>
+                    </div>
+                    <div class="wh">
+                        <h3>__DATE__</h3>
+                        <p>
+                            #include &lt;stdio.h&gt;
+                            <br> int main()
+                            <br> {
+                            <br> printf("Today's date is %s\n",__DATE__);
+                            <br> return 0;
+                            <br> }
+                        </p>
+                        <div class="in">
+                            <p> Today's date is Jul 10 2022</p>
+                        </div>
+                    </div>
+                    <div class="wh">
+                        <h3>__TIME__</h3>
+                        <p>
+                            #include &lt;stdio.h&gt;
+                            <br> int main()
+                            <br> {
+                            <br> printf("Time now is %s\n",__TIME__);
+                            <br> return 0;
+                            <br> }
+                        </p>
+                        <div class="in">
+                            <p>Time now is 10:49:55</p>
+                        </div>
+                    </div>
+                    <div class="wh">
+                        <h3>__LINE__</h3>
+                        <p>
+                            #include &lt;stdio.h&gt;
+                            <br> int main()
+                            <br> {
+                            <br> printf("Line no is %d\n",__LINE__);
+                            <br> return 0;
+                            <br> }
+                        </p>
+                        <div class="in">
+                            <p>Line no is 4</p>
+                        </div>
+                    </div>
+                    <div class="wh">
+                        <h3>__STDC__</h3>
+                        <p>
+                            #include &lt;stdio.h&gt;
+                            <br> int main()
+                            <br> {
+                            <br> printf("ANSI: %d\n",__STDC__);
+                            <br> return 0;
+                            <br> }
+                        </p>
+                        <div class="in">
+                            <p>ANSI: 1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

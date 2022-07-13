@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-5 = Basic Syntax of a C Program</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="side-div">
+        <div class="group">
+            <div class="box">
+                <a href="../index.html">
+                    <img style="height: 40px;" src="../images/home.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="group">
+            <div class="box">
+                <a href="#primitive-types"></a>
+            </div>
+            <ul class="box">
+                <li>
+                    <a href="#numbers"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="right-box">
+        <div class="content-box">
+            <h1>Basic Syntax of a C Program</h1>
+            <p>From here we will learn basic building blocks by which we make C program</p>
+            <div class="inside-content">
+                <h2>Tokens</h2>
+                <p>
+                    Tokens are building block of C programming.
+                    <br>#include &lt;stdio.h&gt; each one of them is a Token
+                    <br>a token can be keyword, indentifier, constant, string literal
+                </p>
+
+                <div class="inside-content">
+                    <h2>Keywords</h2>
+                    <p>
+                        Keywords are <b>reserved words</b> in any programming language. <br> In C programming language there are 32 general purpose keywords
+                        <br>means these words can't be used as constant, variables <br>Example &rarr; return, int
+                    </p>
+                    <div class="inside-content">
+                        <h3>32 General keywords</h3>
+                        <p>
+                            auto, double, int, struct, break, else, long, switch, case, enum, register, typedef, char, extern, return, union, const, float, short, unsigned, continue, for, signed, void, default, goto, sizeof, volatile, do, if, static, while
+                        </p>
+                    </div>
+                </div>
+                <div class="inside-content">
+                    <h2>Identifier</h2>
+                    <p>
+                        Identifiers are names given to variables or functions in order to differentiate them from one another. They are solely based on our choice but there are few rules that we have to follow while naming identifiers. <br> According
+                        to the rules the name can not contain special symbols such as @, - , *, &lt; , etc. In the above given code the “a” integer is an identifier.
+                        <br><br> Note: C is a case sensitive language so an identifier containing a capital letter and another one containing a small letter at the same place will be different. For example the three words: Code, code and cOde can be used
+                        as three different identifiers.
+                    </p>
+                </div>
+                <div class="inside-content">
+                    <h2>Constant</h2>
+                    <p>
+                        Constant are very similar to variable and their values can be of any data type. The only difference between constant and variable is that a constant's value never changes.
+                    </p>
+                </div>
+                <div class="inside-content">
+                    <h2>String literal</h2>
+                    <p>
+                        String literal or string constant is a line of characters enclosed by double quotes. In the above given code “Enter number a” is a string literal. printf is being used there to print string literal onto the screen.
+                    </p>
+                </div>
+                <div class="inside-content">
+                    <h2>Symbols</h2>
+                    <p>
+                        Symbols are special characters reserved to perform certain actions. They are used to notify the compiler so they can perform specific tasks on the given data.
+                        <br><br> Let's talk a little about white space. White space or blank space does not create any difference while using C. Unlike Python where we have to press enter to go to new line, in C we use semi-colon (;) to end a line of
+                        code. <br> So until a semi colon arrives, the compiler will treat the code as a single liner so no matter how many lines we consume the code will run accurately if written correctly. <br> There are two code snippets given below.
+                        You can notice that they differ a lot regarding while space but their execution will show the same output onto the screen i.e. “Hello World”.
+                    </p>
+                    <div class="inside-content">
+                        <h3>code 1</h3>
+                        <p>
+                            #include &lt;stdio.h&gt;
+                            <br>&nbsp;&nbsp; int main() {
+                            <br>&nbsp;&nbsp; printf("Hello World\n");
+                            <br>&nbsp;&nbsp; return 0;
+                            <br> } </p>
+                    </div>
+                    <div class="inside-content">
+                        <h3>code 2</h3>
+                        <p>
+                            #include &lt;stdio.h&gt;
+                            <br><br>&nbsp;&nbsp; int main()
+                            <br> {
+                            <br>&nbsp;&nbsp; printf
+                            <br>&nbsp;&nbsp; (
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp; "Hello World\n"
+                            <br>&nbsp;&nbsp; );
+                            <br>&nbsp;&nbsp; return 0;
+                            <br> } </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

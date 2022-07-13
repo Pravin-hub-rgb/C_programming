@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-17 = GOTO Statement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="side-div">
+        <div class="group">
+            <div class="box">
+                <a href="../index.html">
+                    <img style="height: 40px;" src="../images/home.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="group">
+            <div class="box">
+                <a href="#primitive-types"></a>
+            </div>
+            <ul class="box">
+                <li>
+                    <a href="#numbers"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="right-box">
+        <div class="content-box">
+            <h1>GOTO Statement</h1>
+            <ul>
+                <li>Also called jump statement in C</li>
+                <li>Used to transfer program control to a predefined label</li>
+                <li>Its use is avoided since it causes confusion for the fellow programmers in understanding the code.</li>
+                <li>Goto statement is preferable when we need to break multiple loops using a single statement at the same time.</li>
+
+            </ul>
+            <div class="inside-content">
+                <h3>Sample code</h3>
+                <div class="in">
+                    <p>
+                        #include &lt;stdio.h&gt;
+                        <br>
+                        <br> int main()
+                        <br> {
+                        <br> label:
+                        <br> printf("We are inside label\n");
+                        <br> goto end;
+                        <br> printf("Hello World\n"); //This never prints because the program straight went to the end
+                        <br> goto label;
+                        <br> end:
+                        <br> printf("We are at end");
+                        <br> return 0;
+                        <br> }
+                    </p>
+                </div>
+                <div class="in">
+                    <button class="accordion">Sample code</button>
+                    <div class="panel">
+                        <p>
+                            #include &lt;stdio.h&gt;
+                            <br>
+                            <br>int main()
+                            <br>{
+                            <br>int num;
+                            <br> for(int i=0;i&lt;8;i++)
+                            <br> {
+                            <br>printf("%d", i);
+                            <br>for(int j=0;j&lt;8;j++)
+                            <br> {
+                            <br> printf("Enter the number. enter 0 to exit\n");
+                            <br>scanf("%d",&num);
+                            <br>if(num==0){
+                            <br> goto end;
+                            <br> }
+                            <br> }
+                            <br>}
+                            <br>end:
+                            <br>return 0;
+                            <br>}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

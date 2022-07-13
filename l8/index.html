@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-2 = What is Coding & C Programming Language</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="side-div">
+        <div class="group">
+            <div class="box">
+                <a href="../index.html">
+                    <img style="height: 40px;" src="../images/home.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="group">
+            <div class="box">
+                <a href="#primitive-types"></a>
+            </div>
+            <ul class="box">
+                <li>
+                    <a href="#numbers"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="right-box">
+        <div class="content-box">
+            <h1>Exercise 1</h1>
+            <p>Print a multiplication table of a number entered by the user in pretty form
+                <br> Example:
+                <br> Input
+                <br>Enter the number you want multiplicaiton table of:
+                <br>6
+                <br>
+                <br>Output:
+                <br>Table of 6:
+                <br>6 X 1 = 6
+                <br>6 X 2 = 12
+                <br>.
+                <br>.
+                <br>6 X 10 = 60
+            </p>
+            <div class="inside-content">
+                <h2>Code</h2>
+                <p>
+                    #include &lt;stdio.h&gt;
+                    <br>
+                    <br> int main()
+                    <br> {
+                    <br> int a=5;
+
+                    <br> printf("Enter a number you want multiplicaiton table of:\n");
+                    <br> scanf("%d", &a);
+                    <br>
+                    <br> printf("Table of %d\n",a);
+                    <br> printf("%d X 1 = %d\n", a, a*1);
+                    <br> printf("%d X 2 = %d\n",a,a*2);
+                    <br> printf("%d X 3 = %d\n",a,a*3);
+                    <br> printf("%d X 4 = %d\n",a,a*4);
+                    <br> printf("%d X 5 = %d\n",a,a*5);
+                    <br> printf("%d X 6 = %d\n",a,a*6);
+                    <br> printf("%d X 7 = %d\n",a,a*7);
+                    <br> printf("%d X 8 = %d\n",a,a*8);
+                    <br> printf("%d X 9 = %d\n",a,a*9);
+                    <br> printf("%d X 10 = %d\n",a,a*10);
+                    <br>// using loop
+                    <br> // for(int i = 1; i &lt; 11; i++){
+                    <br> // int result = a * i;
+                    <br> // printf("%d X %d = %d \n", a, i, result );
+                    <br> // }
+                    <br>
+                    <br> return 0;
+                    <br> }
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
