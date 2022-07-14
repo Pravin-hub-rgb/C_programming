@@ -1,269 +1,109 @@
-/* Google Font CDN Link */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-* {
-    /* margin: 0; */
-    /* padding: 0; */
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+.grad {
+    background: #000046;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1CB5E0, #000046);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-:root {
-    --black-color: #11101d;
-    --white-color: #fff;
-    --sky-color: #E4E9F7;
-    --light-black: #1d1b31;
-}
-
-*/::selection {
-    color: var(--white-color);
-    background: var(--black-color);
-}
-
-.sidebar {
+#navbar {
+    width: 100vw;
+    height: 40px;
     position: fixed;
     top: 0;
-    left: 0;
-    height: 100%;
-    width: 78px;
-    background: var(--black-color);
-    padding: 6px 14px;
-    z-index: 99;
-    transition: all 0.5s ease;
-}
-
-.sidebar.active {
-    width: 240px;
-}
-
-.sidebar .logo_content .logo {
-    color: var(--white-color);
+    padding: 4px;
     display: flex;
-    height: 50px;
-    width: 100%;
+}
+
+#navbar>div {
+    width: 50%;
+    display: flex;
     align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.1s ease;
+    /* justify-content: center; */
 }
 
-.sidebar.active .logo_content .logo {
-    opacity: 1;
-    pointer-events: none;
-}
-
-.logo_content .logo .logo_name {
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.sidebar #btn {
-    position: absolute;
-    color: var(--white-color);
-    top: 6px;
-    left: 50%;
-    font-size: 22px;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    line-height: 50px;
-    transform: translateX(-50%);
-    cursor: pointer;
-}
-
-.sidebar.active #btn {
-    left: 90%;
-}
-
-.sidebar ul {
-    margin-top: 20px;
+#navbar h2 {
+    color: white;
     margin: 0;
     padding: 0;
 }
 
-.sidebar ul li {
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin: 5px 0;
-    list-style: none;
-    line-height: 50px;
-}
-
-.sidebar ul li input {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 12px;
-    outline: none;
-    border: none;
-    background: #1d1b31;
-    padding-left: 50px;
-    font-size: 18px;
-    color: var(--white-color);
-}
-
-.sidebar ul li .bx-search {
-    position: relative;
-    z-index: 99;
-    color: var(--white-color);
-    font-size: 22px;
-    transition: all 0.5s ease;
-}
-
-.sidebar ul li .bx-search:hover {
-    background: var(--white-color);
-    color: #1d1b31;
-}
-
-.sidebar ul li a {
-    color: var(--white-color);
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    border-radius: 12px;
-    white-space: nowrap;
-    transition: all 0.2s ease;
-}
-
-.sidebar ul li a:hover {
-    color: var(--black-color);
-    background: var(--white-color);
-}
-
-.sidebar ul li i {
-    font-size: 18px;
-    font-weight: 400;
-    height: 50px;
-    min-width: 50px;
-    border-radius: 12px;
-    line-height: 50px;
-    text-align: center;
-}
-
-.sidebar .links_name {
-    font-size: 15px;
-    font-weight: 400;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-.sidebar.active .links_name {
-    transition: 0s;
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.sidebar .content {
-    position: absolute;
-    color: var(--white-color);
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-.sidebar .content .func {
-    position: relative;
-    padding: 10px 6px;
-    height: 60px;
-    background: none;
-    transition: all 0.4s ease;
-}
-
-.sidebar.active .content .func {
-    background: var(--light-black);
-}
-
-.content .func .func_details {
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    white-space: nowrap;
-    transition: all 0.4s ease;
-}
-
-.sidebar.active .func .func_details {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.actionNP {
-    margin-left: 10px;
-}
-
-.actionA {
-    color: white;
+#nav-icon1 span {
     display: block;
-    text-align: center;
-    align-items: center;
+    margin: 4px;
+    height: 7px;
+    width: 40px;
+    background: #000000;
+    border-radius: 9px;
+}
+
+
+/* **** w3school **** */
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidepanel {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    border-radius: 12px;
-    margin: 0 auto;
-    padding: 4px 30px;
-    border: 1px solid white;
-    transition: all 0.2s ease;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
-.actionA:hover {
-    background-color: rgba(255, 255, 255, 0.13);
+.sidepanel .home {
+    font-size: 25px;
 }
 
-.func_details .name {
-    font-size: 15px;
-    font-weight: 400;
+.sidepanel a:hover {
+    color: #f1f1f1;
 }
 
-#doit {
+.sidepanel .closebtn {
     position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 50px;
-    line-height: 50px;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.openbtn {
     font-size: 20px;
-    border-radius: 12px;
+    cursor: pointer;
+    padding: 5px;
     text-align: center;
-    transition: all 0.4s ease;
+    border: none;
+    width: 45px;
 }
 
-.sidebar.active .func #doit {
-    left: 80%;
-    background: none;
-}
-
-.home_content {
-    position: absolute;
-    /* height: 100%; */
-    width: calc(100% - 78px);
-    left: 78px;
-    background: var(--sky-color);
-    padding: 20px;
-    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
-    transition: all 0.5s ease;
-}
-
-.sidebar.active~.home_content {
-    z-index: 100;
-    width: calc(100% - 240px);
-    left: 240px;
-}
-
-
-/* contect-box  */
-
-.content-box {
-    background-color: rgba(0, 180, 216, 0.3);
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
+.openbtn:hover {
+    background-color: rgba(0, 0, 0, 0.158)
 }
 
 
 /* ******** Local Stuff *************** */
+
+.content-box {
+    background-color: rgba(0, 180, 216, 0.3);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 55px 10px 20px 10px;
+}
 
 .inside-content {
     background-color: rgba(255, 255, 255, 0.377);
@@ -288,12 +128,13 @@
     color: black;
 }
 
-
-/* Style the buttons that are used to open and close the accordion panel */
+* {
+    box-sizing: content-box;
+}
 
 body {
     background-color: #F1FFFA;
-    color: #454545;
+    color: #000000;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -303,14 +144,13 @@ h1 {
     font-size: 2rem;
 }
 
-
-/* li {
-    font-size: 1.2rem;
-} */
-
 p {
     font-size: 1.1rem;
     line-height: 23px;
+}
+
+li {
+    font-size: 1.1rem;
 }
 
 
@@ -331,7 +171,7 @@ p {
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 
-.activeA,
+.active,
 .accordion:hover {
     background-color: #ccc;
 }
@@ -358,4 +198,21 @@ p {
     border: 2px solid rgb(100, 0, 0);
     padding: 8px;
     width: 45%;
+}
+
+
+/* ****** part 3****** */
+
+.part3>div {
+    display: flex;
+    border: 2px solid black;
+    margin: 5px 0;
+    border-radius: 5px;
+    justify-content: space-evenly;
+}
+
+.part3>div div {
+    width: 32%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.13);
 }

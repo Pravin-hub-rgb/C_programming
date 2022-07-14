@@ -1,40 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L-6= Variables & Data types in C</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styleLesson.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <section id="side-div">
-        <div class="group">
-            <div class="box">
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <div class="logo_name">C Programming</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+        </div>
+        <ul class="nav_list">
+            <li>
                 <a href="../index.html">
-                    <img style="height: 40px;" src="../images/home.svg" alt="">
+                    <i class='bx bxs-home'></i>
+                    <span class="links_name">Home</span>
                 </a>
+
+            </li>
+            <li>
+                <a href="#t1">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Variables</span>
+                </a>
+            </li>
+            <li>
+                <a href="#t2">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Data types</span>
+                </a>
+            </li>
+        </ul>
+        <div class="content">
+            <div class="func">
+                <div class="func_details">
+                    <div class="actionPN">
+                        <div class="name">
+                            <a class="actionA" href="../l7/index.html">
+                                <span>Next Topic</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <i class='bx bx-right-arrow-alt' id="doit"></i>
+            </div>
+            <div class="func">
+                <div class="func_details">
+                    <div class="actionPN">
+                        <div class="name">
+                            <a class="actionA" href="../l5/index.html">
+                                <span>Previous Topic</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <i class='bx bx-left-arrow-alt' id="doit"></i>
             </div>
         </div>
-        <div class="group">
-            <div class="box">
-                <a href="#primitive-types"></a>
-            </div>
-            <ul class="box">
-                <li>
-                    <a href="#numbers"></a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section id="right-box">
+    </div>
+    <div class="home_content">
+
         <div class="content-box">
-            <h1>Variables & Data Types in C</h1>
+            <h1 id="t1">Variables & Data Types in C</h1>
             <p>
                 Each type of variable contains specific type of data in it.
-                <br>variables are nothing more than simple names given to a specific space in memory for reservation
+                <br>variables are nothing more than a simple names given to a specific space in memory for reservation
             </p>
             <div class="inside-content">
                 <h2>Declaration</h2>
@@ -55,7 +94,7 @@
                     <li>Invalid variavle names: $harry, int 77harry, char long;</li>
                 </ul>
             </div>
-            <div class="inside-content">
+            <div class="inside-content" id="t2">
                 <h2>Data Types in C</h2>
                 <ul>
                     <li>Basic Data Type: int, char, float, double</li>
@@ -66,163 +105,154 @@
             </div>
             <div class="inside-content">
                 <h2>Data Types: Size (32-bit architecture)</h2>
-                <table>
-                    <tbody>
-                        <tr style="height: 96px;">
-                            <td style="width: 26.054%; height: 96px;" scope="row">
-                                <p><strong>DATA TYPE</strong></p>
-                            </td>
-                            <td style="width: 28.4992%; height: 96px;">
-                                <p><strong>MEMORY (BYTES)</strong></p>
-                            </td>
-                            <td style="width: 45.3626%; height: 96px;">
-                                <p><strong>RANGE</strong></p>
-                            </td>
+                <div class="part3">
+                    <div>
+                        <div>
+                            <p><strong>DATA TYPE</strong></p>
+                        </div>
+                        <div>
+                            <p><strong>MEMORY (BYTES)</strong></p>
+                        </div>
+                        <div>
+                            <p><strong>RANGE</strong></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Char</p>
+                        </div>
+                        <div>
+                            <p>1 byte = 8 bits</p>
+                        </div>
+                        <div>
+                            <p>-128 to 127</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>signed char</p>
+                        </div>
+                        <div>
+                            <p>1</p>
+                        </div>
+                        <div>
+                            <p>-128 to 127</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>unsigned char</p>
+                        </div>
+                        <div>
+                            <p>1</p>
+                        </div>
+                        <div>
+                            <p>0 to 255</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>short int</p>
+                        </div>
+                        <div>
+                            <p>2</p>
+                        </div>
+                        <div>
+                            <p>-32,768 to 32,767</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>unsigned short int</p>
+                        </div>
+                        <div>
+                            <p>2</p>
+                        </div>
+                        <div>
+                            <p>0 to 65,535</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>unsigned int</p>
+                        </div>
+                        <div>
+                            <p>4</p>
+                        </div>
+                        <div>
+                            <p>0 to 65,535</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>int</p>
+                        </div>
+                        <div>
+                            <p>2</p>
+                        </div>
+                        <div>
+                            <p>--32,768 to 32,767</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>long int</p>
+                        </div>
+                        <div>
+                            <p>4</p>
+                        </div>
+                        <div>
+                            <p>-2,147,483,648 to 2,147,483,647</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>unsigned long int</p>
+                        </div>
+                        <div>
+                            <p>4</p>
+                        </div>
+                        <div>
+                            <p>0 to 4,294,967,295</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>float</p>
+                        </div>
+                        <div>
+                            <p>4</p>
+                        </div>
+                        <div>
+                            <p></p>
+                        </div>
 
-                        </tr>
-                        <tr style="height: 96px;">
-                            <td style="width: 26.054%; height: 96px;">
-                                <p>Char</p>
-                            </td>
-                            <td style="width: 28.4992%; height: 96px;">
-                                <p>1 byte = 8 bits</p>
-                            </td>
-                            <td style="width: 45.3626%; height: 96px;">
-                                <p>-128 to 127</p>
-                            </td>
+                    </div>
+                    <div>
+                        <div>
+                            <p>double</p>
+                        </div>
+                        <div>
+                            <p>8</p>
+                        </div>
+                        <div>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>long double</p>
+                        </div>
+                        <div>
+                            <p>10</p>
+                        </div>
+                        <div>
+                            <p></p>
+                        </div>
+                    </div>
 
-                        </tr>
-                        <tr style="height: 96px;">
-                            <td style="width: 26.054%; height: 96px;">
-                                <p>signed char</p>
-                            </td>
-                            <td style="width: 28.4992%; height: 96px;">
-                                <p>1</p>
-                            </td>
-                            <td style="width: 45.3626%; height: 96px;">
-                                <p>-128 to 127</p>
-                            </td>
-
-                        </tr>
-                        <tr style="height: 96px;">
-                            <td style="width: 26.054%; height: 96px;">
-                                <p>unsigned char</p>
-                            </td>
-                            <td style="width: 28.4992%; height: 96px;" scope="rowgroup">
-                                <p>1</p>
-                            </td>
-                            <td style="width: 45.3626%; height: 96px;">
-                                <p>0 to 255</p>
-                            </td>
-
-                        </tr>
-                        <tr style="height: 97px;">
-                            <td style="width: 26.054%; height: 97px;">
-                                <p>short int</p>
-                            </td>
-                            <td style="width: 28.4992%; height: 97px;">
-                                <p>2</p>
-                            </td>
-                            <td style="width: 45.3626%; height: 97px;">
-                                <p>-32,768 to 32,767</p>
-                            </td>
-
-                        </tr>
-                        <tr style="height: 97px;">
-                            <td style="width: 26.054%; height: 97px;">
-                                <p>unsigned short int</p>
-                            </td>
-                            <td style="width: 28.4992%; height: 97px;">
-                                <p>2</p>
-                            </td>
-                            <td style="width: 45.3626%; height: 97px;">
-                                <p>0 to 65,535</p>
-                            </td>
-
-                        </tr>
-                        <tr style="height: 97px;">
-                            <td style="width: 26.054%; height: 97px;">
-                                <p>unsigned int</p>
-                            </td>
-                            <td style="width: 28.4992%; height: 97px;">
-                                <p>4</p>
-                            </td>
-                            <td style="width: 45.3626%; height: 97px;">
-                                <p>0 to 65,535</p>
-                            </td>
-
-                        </tr>
-                        <tr style="height: 97px;">
-                            <td style="width: 26.054%; height: 97px;">
-                                <p>int</p>
-                            </td>
-                            <td style="width: 28.4992%; height: 97px;">
-                                <p>2</p>
-                            </td>
-                            <td style="width: 45.3626%; height: 97px;">
-                                <p>--32,768 to 32,767</p>
-                            </td>
-
-                        </tr>
-                        <tr style="height: 97px;">
-                            <td style="width: 26.054%; height: 97px;">
-                                <p>long int</p>
-                            </td>
-                            <td style="width: 28.4992%; height: 97px;">
-                                <p>4</p>
-                            </td>
-                            <td style="width: 45.3626%; height: 97px;">
-                                <p>-2,147,483,648 to 2,147,483,647</p>
-                            </td>
-
-                        </tr>
-                        <tr style="height: 98px;">
-                            <td style="width: 26.054%; height: 98px;">
-                                <p>unsigned long int</p>
-                            </td>
-                            <td style="width: 28.4992%; height: 98px;">
-                                <p>4</p>
-                            </td>
-                            <td style="width: 45.3626%; height: 98px;">
-                                <p>0 to 4,294,967,295</p>
-                            </td>
-
-                        </tr>
-                        <tr style="height: 98px;">
-                            <td style="width: 26.054%; height: 98px;">
-                                <p>float</p>
-                            </td>
-                            <td style="width: 28.4992%; height: 98px;">
-                                <p>4</p>
-                            </td>
-                            <td style="width: 45.3626%; height: 98px;">&nbsp;</td>
-
-                        </tr>
-                        <tr style="height: 98px;">
-                            <td style="width: 26.054%; height: 98px;">
-                                <p>double</p>
-                            </td>
-                            <td style="width: 28.4992%; height: 98px;">
-                                <p>8</p>
-                            </td>
-                            <td style="width: 45.3626%; height: 98px;">&nbsp;</td>
-
-                        </tr>
-                        <tr style="height: 114px;">
-                            <td style="width: 26.054%; height: 114px;">
-                                <p>long double</p>
-                            </td>
-                            <td style="width: 28.4992%; height: 114px;">
-                                <p>10</p>
-                            </td>
-                            <td style="width: 45.3626%; height: 114px;">
-                                <p><br><br></p>
-                            </td>
-
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="inside-content">
+                </div>
+                <div class="in">
                     <h3>Code for finding the size of data types</h3>
                     <div class="inside-content">
                         <p>
@@ -246,12 +276,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
+    <script src="../main.js"></script>
 </body>
-
-</html>
-
-</html>
 
 </html>

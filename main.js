@@ -1,32 +1,29 @@
+// Accordion code
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-        let btn = document.querySelector("#btn");
-        let sidebar = document.querySelector(".sidebar");
-        let searchBtn = document.querySelector(".bx-search");
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");        
 
-        btn.onclick = function() {
-            sidebar.classList.toggle("active");
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
         }
-        searchBtn.onclick = function() {
-            sidebar.classList.toggle("active");
-        }
+    });
+}
 
 
-        // Accordion code
-        var acc = document.getElementsByClassName("accordion");
-        var i;
+function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+}
 
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                /* Toggle between adding and removing the "active" class,
-                to highlight the button that controls the panel */
-                this.classList.toggle("activeA");
+function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+}
 
-                /* Toggle between hiding and showing the active panel */
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-            });
-        }

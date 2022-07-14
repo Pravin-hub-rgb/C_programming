@@ -1,39 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L-5 = Basic Syntax of a C Program</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styleLesson.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <section id="side-div">
-        <div class="group">
-            <div class="box">
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <div class="logo_name">C Programming</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
                 <a href="../index.html">
-                    <img style="height: 40px;" src="../images/home.svg" alt="">
+                    <i class='bx bxs-home'></i>
+                    <span class="links_name">Home</span>
                 </a>
+            </li>
+            <li>
+                <a href="#t1">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Tokens &darr;</span>
+                </a>
+            </li>
+            <li>
+                <a href="#t2">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Keywords</span>
+                </a>
+            </li>
+            <li>
+                <a href="#t3">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Identifier</span>
+                </a>
+            </li>
+            <li>
+                <a href="#t4">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Constant</span>
+                </a>
+            </li>
+            <li>
+                <a href="#t5">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">String Literal</span>
+                </a>
+            </li>
+            <li>
+                <a href="#t6">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Symbols</span>
+                </a>
+            </li>
+        </ul>
+        <div class="content">
+            <div class="func">
+                <div class="func_details">
+                    <div class="actionPN">
+                        <div class="name">
+                            <a class="actionA" href="../l6/index.html">
+                                <span>Next Topic</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <i class='bx bx-right-arrow-alt' id="doit"></i>
+            </div>
+            <div class="func">
+                <div class="func_details">
+                    <div class="actionPN">
+                        <div class="name">
+                            <a class="actionA" href="../l4/index.html">
+                                <span>Previous Topic</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <i class='bx bx-left-arrow-alt' id="doit"></i>
             </div>
         </div>
-        <div class="group">
-            <div class="box">
-                <a href="#primitive-types"></a>
-            </div>
-            <ul class="box">
-                <li>
-                    <a href="#numbers"></a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section id="right-box">
+    </div>
+    <div class="home_content">
         <div class="content-box">
             <h1>Basic Syntax of a C Program</h1>
             <p>From here we will learn basic building blocks by which we make C program</p>
-            <div class="inside-content">
+            <div class="inside-content" id="t1">
                 <h2>Tokens</h2>
                 <p>
                     Tokens are building block of C programming.
@@ -41,7 +101,7 @@
                     <br>a token can be keyword, indentifier, constant, string literal
                 </p>
 
-                <div class="inside-content">
+                <div class="inside-content" id="t2">
                     <h2>Keywords</h2>
                     <p>
                         Keywords are <b>reserved words</b> in any programming language. <br> In C programming language there are 32 general purpose keywords
@@ -54,28 +114,28 @@
                         </p>
                     </div>
                 </div>
-                <div class="inside-content">
+                <div class="inside-content" id="t3">
                     <h2>Identifier</h2>
                     <p>
                         Identifiers are names given to variables or functions in order to differentiate them from one another. They are solely based on our choice but there are few rules that we have to follow while naming identifiers. <br> According
-                        to the rules the name can not contain special symbols such as @, - , *, &lt; , etc. In the above given code the “a” integer is an identifier.
+                        to the rules the name can not contain special symbols such as @, - , *, &lt; , etc.
                         <br><br> Note: C is a case sensitive language so an identifier containing a capital letter and another one containing a small letter at the same place will be different. For example the three words: Code, code and cOde can be used
                         as three different identifiers.
                     </p>
                 </div>
-                <div class="inside-content">
+                <div class="inside-content" id="t4">
                     <h2>Constant</h2>
                     <p>
                         Constant are very similar to variable and their values can be of any data type. The only difference between constant and variable is that a constant's value never changes.
                     </p>
                 </div>
-                <div class="inside-content">
+                <div class="inside-content" id="t5">
                     <h2>String literal</h2>
                     <p>
                         String literal or string constant is a line of characters enclosed by double quotes. In the above given code “Enter number a” is a string literal. printf is being used there to print string literal onto the screen.
                     </p>
                 </div>
-                <div class="inside-content">
+                <div class="inside-content" id="t6">
                     <h2>Symbols</h2>
                     <p>
                         Symbols are special characters reserved to perform certain actions. They are used to notify the compiler so they can perform specific tasks on the given data.
@@ -84,33 +144,37 @@
                         You can notice that they differ a lot regarding while space but their execution will show the same output onto the screen i.e. “Hello World”.
                     </p>
                     <div class="inside-content">
-                        <h3>code 1</h3>
-                        <p>
-                            #include &lt;stdio.h&gt;
-                            <br>&nbsp;&nbsp; int main() {
-                            <br>&nbsp;&nbsp; printf("Hello World\n");
-                            <br>&nbsp;&nbsp; return 0;
-                            <br> } </p>
+                        <button class="accordion">Code 1</button>
+                        <div class="panel">
+                            <p>
+                                #include &lt;stdio.h&gt;
+                                <br>&nbsp;&nbsp; int main() {
+                                <br>&nbsp;&nbsp; printf("Hello World\n");
+                                <br>&nbsp;&nbsp; return 0;
+                                <br> } </p>
+                        </div>
                     </div>
                     <div class="inside-content">
-                        <h3>code 2</h3>
-                        <p>
-                            #include &lt;stdio.h&gt;
-                            <br><br>&nbsp;&nbsp; int main()
-                            <br> {
-                            <br>&nbsp;&nbsp; printf
-                            <br>&nbsp;&nbsp; (
-                            <br>&nbsp;&nbsp;&nbsp;&nbsp; "Hello World\n"
-                            <br>&nbsp;&nbsp; );
-                            <br>&nbsp;&nbsp; return 0;
-                            <br> } </p>
-                        </p>
+                        <button class="accordion">Code 2</button>
+                        <div class="panel">
+                            <p>
+                                #include &lt;stdio.h&gt;
+                                <br><br>&nbsp;&nbsp; int main()
+                                <br> {
+                                <br>&nbsp;&nbsp; printf
+                                <br>&nbsp;&nbsp; (
+                                <br>&nbsp;&nbsp;&nbsp;&nbsp; "Hello World\n"
+                                <br>&nbsp;&nbsp; );
+                                <br>&nbsp;&nbsp; return 0;
+                                <br> } </p>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+    <script src="../main.js"></script>
 </body>
 
 </html>

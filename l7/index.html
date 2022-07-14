@@ -1,41 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L-7 = Operators in C</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styleLesson.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <section id="side-div">
-        <div class="group">
-            <div class="box">
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <div class="logo_name">C Programming</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+
+        </div>
+        <ul class="nav_list">
+            <li>
                 <a href="../index.html">
-                    <img style="height: 40px;" src="../images/home.svg" alt="">
+                    <i class='bx bxs-home'></i>
+                    <span class="links_name">Home</span>
                 </a>
+
+            </li>
+            <li>
+                <a href="#op">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Operators in C</span>
+                </a>
+            </li>
+            <li>
+                <a href="#arith">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Arithmetic</span>
+                </a>
+            </li>
+            </li>
+            <li>
+                <a href="#relation">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Relational</span>
+                </a>
+            </li>
+            <li>
+                <a href="#logical">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Logical</span>
+                </a>
+            </li>
+            <li>
+                <a href="#bitwise">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Bitwise</span>
+                </a>
+            </li>
+            <li>
+                <a href="#assign">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Assignment</span>
+                </a>
+            </li>
+            <li>
+                <a href="#mis">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Miscellaneous</span>
+                </a>
+            </li>
+            <li>
+                <a href="#opPre">
+                    <i class='bx bx-code-alt'></i>
+                    <span class="links_name">Precedence</span>
+                </a>
+            </li>
+        </ul>
+        <div class="content">
+            <div class="func">
+                <div class="func_details">
+                    <div class="actionPN">
+                        <div class="name">
+                            <a class="actionA" href="../l8/index.html">
+                                <span>Next Topic</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <i class='bx bx-right-arrow-alt' id="doit"></i>
+            </div>
+            <div class="func">
+                <div class="func_details">
+                    <div class="actionPN">
+                        <div class="name">
+                            <a class="actionA" href="../l6/index.html">
+                                <span>Previous Topic</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <i class='bx bx-left-arrow-alt' id="doit"></i>
             </div>
         </div>
-        <div class="group">
-            <ul class="box">
-                <li>
-                    <a href="#operator">Operator</a>
-                    <ul>
-                        <li>
-                            <a href="#arith">Arithmetic</a></li>
-                        <li><a href="#relation">Relational</a></li>
-                        <li><a href="#logical">Logical</a></li>
-                        <li><a href="#bitwise">Bitwise</a></li>
-                        <li><a href="#assign">Assignment</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section id="right-box">
-        <div class="content-box">
+    </div>
+    <div class="home_content">
+        <div class="content-box" id="op">
             <h1>Operators in C</h1>
             <div class="inside-content">
                 <h2>Basic Operators and Functions</h2>
@@ -83,7 +153,7 @@
                         <br> / &rarr; Division
                         <br> %&rarr; Modulus (gives remainder)
                     </p>
-                    <div class=" in ">
+                    <div class="wh">
                         <p>
                             #include &lt;stdio.h&gt;
                             <br>
@@ -100,7 +170,7 @@
                             <br> }
                         </p>
                     </div>
-                    <div class="in ">
+                    <div class="wh">
                         <p>
                             a + b = 40
                             <br>a - b = 28
@@ -119,7 +189,7 @@
                         <br> &gt;= &rarr; Greater than or equal to
                         <br> &lt;= &rarr; Less than or equal to
                     </p>
-                    <div class="in ">
+                    <div class="wh">
                         <p>These returns true(1) or false(0) value</p>
                         <p>used in conditional statements</p>
                     </div>
@@ -154,7 +224,7 @@
                         <br>&star; /= &rarr; Divide AND assignment operator. It divides the left operand with the operand and the result is assigned to the left operand.
                     </p>
                 </div>
-                <div class="in ">
+                <div class="in" id="mis">
                     <h3>Miscellaneous Operators</h3>
                     <p>
                         &star; sizeof() &rarr; Returns the size of a variable. &rarr; sizeof(a), where a is integer, will return int's size on that architecture.
@@ -163,88 +233,172 @@
                         <br>&star; ? : &rarr; Conditional Expression &rarr; If condition is true ? then value X : otherwise value Y
                     </p>
                 </div>
-                <div class="in ">
+                <div class="in" id="opPre">
                     <h3>Operator Precedence in C</h3>
                     <p>
                         In programming languages, the associativity of an operator is a property that determines how operators of the same precedence are grouped in the absence or parenthesis.
                     </p>
-                    <div class="table3row in ">
-                        <div class="tableH ">
-                            <p><b>Category</b></p>
-                            <p><b>Operator</b></p>
-                            <p><b>Associativity</b></p>
+                    <div class="part3 wh">
+                        <div>
+                            <div>
+                                <p><b>Category</b></p>
+                            </div>
+                            <div>
+                                <p><b>Operator</b></p>
+                            </div>
+                            <div>
+                                <p><b>Associativity</b></p>
+                            </div>
                         </div>
-                        <div class="tableH ">
-                            <p>Postfix</p>
-                            <p>() [] -&gt; . ++ --</p>
-                            <p>Left to right</p>
+                        <div>
+                            <div>
+                                <p>Postfix</p>
+                            </div>
+                            <div>
+                                <p>() [] -&gt; . ++ --</p>
+                            </div>
+                            <div>
+                                <p>Left to right</p>
+                            </div>
                         </div>
-                        <div class="tableH ">
-                            <p>Unary</p>
-                            <p>+ - ! ~ ++ -- (type)* & sizeof</p>
-                            <p>Right to left</p>
+                        <div>
+                            <div>
+                                <p>Unary</p>
+                            </div>
+                            <div>
+                                <p>+ - ! ~ ++ -- (type)* & sizeof</p>
+                            </div>
+                            <div>
+                                <p>Right to left</p>
+                            </div>
                         </div>
-                        <div class="tableH ">
-                            <p>Multiplicative</p>
-                            <p>* / %</p>
-                            <p>Left to right</p>
+                        <div>
+                            <div>
+                                <p>Multiplicative</p>
+                            </div>
+                            <div>
+                                <p>* / %</p>
+                            </div>
+                            <div>
+                                <p>Left to right</p>
+                            </div>
                         </div>
-                        <div class="tableH ">
-                            <p>Additive</p>
-                            <p>+ -</p>
-                            <p>Left to right</p>
+                        <div>
+                            <div>
+                                <p>Additive</p>
+                            </div>
+                            <div>
+                                <p>+ -</p>
+                            </div>
+                            <div>
+                                <p>Left to right</p>
+                            </div>
                         </div>
-                        <div class="tableH ">
-                            <p>Shift</p>
-                            <p>&lt;&lt; &gt;&gt;</p>
-                            <p>Left to right</p>
+                        <div>
+                            <div>
+                                <p>Shift</p>
+                            </div>
+                            <div>
+                                <p>&lt;&lt; &gt;&gt;</p>
+                            </div>
+                            <div>
+                                <p>Left to right</p>
+                            </div>
                         </div>
-                        <div class="tableH ">
-                            <p>Relational</p>
-                            <p>&lt; &lt;= &gt; &gt;=</p>
-                            <p>Left to right</p>
+                        <div>
+                            <div>
+                                <p>Relational</p>
+                            </div>
+                            <div>
+                                <p>&lt; &lt;= &gt; &gt;=</p>
+                            </div>
+                            <div>
+                                <p>Left to right</p>
+                            </div>
                         </div>
-                        <div class="tableH ">
-                            <p>Equality</p>
-                            <p>== !=</p>
-                            <p>Left to right</p>
+                        <div>
+                            <div>
+                                <p>Equality</p>
+                            </div>
+                            <div>
+                                <p>== !=</p>
+                            </div>
+                            <div>
+                                <p>Left to right</p>
+                            </div>
                         </div>
-                        <div class="tableH ">
-                            <p>Bitwise AND</p>
-                            <p>&</p>
-                            <p>Left to right</p>
+                        <div>
+                            <div>
+                                <p>Bitwise AND</p>
+                            </div>
+                            <div>
+                                <p>&</p>
+                            </div>
+                            <div>
+                                <p>Left to right</p>
+                            </div>
                         </div>
-                        <div class="tableH ">
-                            <p>Bitwise XOR</p>
-                            <p>^</p>
-                            <p>Left to right</p>
+                        <div>
+                            <div>
+                                <p>Bitwise XOR</p>
+                            </div>
+                            <div>
+                                <p>^</p>
+                            </div>
+                            <div>
+                                <p>Left to right</p>
+                            </div>
                         </div>
-                        <div class="tableH ">
-                            <p>Bitwise OR</p>
-                            <p>|</p>
-                            <p>Left to right</p>
+                        <div>
+                            <div>
+                                <p>Bitwise OR</p>
+                            </div>
+                            <div>
+                                <p>|</p>
+                            </div>
+                            <div>
+                                <p>Left to right</p>
+                            </div>
                         </div>
-                        <div class="tableH ">
-                            <p>Conditional</p>
-                            <p>? :</p>
-                            <p>Right to left</p>
+                        <div>
+                            <div>
+                                <p>Conditional</p>
+                            </div>
+                            <div>
+                                <p>? :</p>
+                            </div>
+                            <div>
+                                <p>Right to left</p>
+                            </div>
                         </div>
-                        <div class="tableH ">
-                            <p>Assignment</p>
-                            <p>= += -= *= /= %= &gt;&gt;= &lt;&lt;= &= ^= !=</p>
-                            <p>Right to left</p>
+                        <div>
+                            <div>
+                                <p>Assignment</p>
+                            </div>
+                            <div>
+                                <p>= += -= *= /= %= &gt;&gt;= &lt;&lt;= &= ^= !=</p>
+                            </div>
+                            <div>
+                                <p>Right to left</p>
+                            </div>
                         </div>
-                        <div class="tableH ">
-                            <p>Comma</p>
-                            <p>,</p>
-                            <p>Left to right</p>
+                        <div>
+                            <div>
+                                <p>Comma</p>
+                            </div>
+                            <div>
+                                <p>,</p>
+                            </div>
+                            <div>
+                                <p>Left to right</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+    <script src="../main.js"></script>
 </body>
 
 </html>
