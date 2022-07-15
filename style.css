@@ -30,25 +30,41 @@ h2 {
 .folder {
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    background-image: url('images/folder.svg');
+    margin: 5px;
+    /* background-image: url('./images/folder.svg'); */
+    background: #000428;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #004e92, #000428);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #004e92, #000428);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px white;
+    width: 24%;
+}
+
+@media only screen and (max-width: 480px) {
+    .folder {
+        width: 45%;
+    }
 }
 
 .folder h2 {
-    color: black;
-    margin-top: 124px;
+    color: rgb(255, 255, 255);
+    /* margin-top: 124px; */
+    font-size: 1.2rem;
 }
 
 .folder a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: whitesmoke;
-    display: inline-block;
-    margin-top: 10px;
+    display: block;
+    /* margin-top: 5px; */
     text-align: center;
     background-color: black;
     border-radius: 10px;
+    box-shadow: -3px -3px 8px rgb(255, 255, 255);
 }
