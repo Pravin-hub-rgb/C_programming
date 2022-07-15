@@ -54,7 +54,6 @@ h2 {
 
 .folder h2 {
     color: rgb(255, 255, 255);
-    /* margin-top: 124px; */
     font-size: 1.2rem;
 }
 
@@ -62,7 +61,8 @@ h2 {
     font-size: 1.1rem;
     color: whitesmoke;
     display: block;
-    /* margin-top: 5px; */
+    width: 96%;
+    margin: 4px auto;
     text-align: center;
     background-color: black;
     border-radius: 10px;
