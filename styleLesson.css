@@ -117,7 +117,7 @@ body {
     background-color: rgba(0, 0, 0, 0.151);
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin: 15px 0;
     box-shadow: 0 0 15px rgb(0, 0, 0);
 }
 
@@ -125,7 +125,7 @@ body {
     background-color: rgba(255, 255, 255, 0.411);
     padding: 15px;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin: 10px 0;
     box-shadow: 0 0 15px black;
 }
 
@@ -142,6 +142,10 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    text-align: center;
+}
+
 p {
     font-size: 1.1rem;
     line-height: 23px;
@@ -149,6 +153,10 @@ p {
 
 li {
     font-size: 1.1rem;
+}
+
+button {
+    font-size: 1rem;
 }
 
 
@@ -213,5 +221,5 @@ li {
 .part3>div div {
     width: 32%;
     text-align: center;
-    background-color: rgba(248, 248, 248, 0.37) 0.13);
+    background-color: rgba(248, 248, 248, 0.37);
 }

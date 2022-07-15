@@ -323,6 +323,22 @@
                             </ul>
                         </li>
                     </ul>
+                    <div class="in">
+                        <button class="accordion">code</button>
+                        <div class="panel">
+                            <p>
+                                #include &lt;stdio.h>
+                                <br> int main()
+                                <br> {
+                                <br> FILE *ptr = NULL;
+                                <br> ptr = fopen("myfile2.txt","w"); // we have to open this in 'write' mode
+                                <br> fputc('o',ptr);
+                                <br><br>fclose(ptr);
+                                <br> return 0;
+                                <br> }
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="wh">
                     <h3>fputs function</h3>
@@ -333,6 +349,22 @@
                             </ul>
                         </li>
                     </ul>
+                    <div class="in">
+                        <button class="accordion">code</button>
+                        <div class="panel">
+                            <p>
+                                #include &lt;stdio.h>
+                                <br> int main()
+                                <br> {
+                                <br> FILE *ptr = NULL;
+                                <br> ptr = fopen("myfile2.txt","w"); // we have to open this in 'write' mode
+                                <br> fputs("Harry is great",ptr);
+                                <br><br>fclose(ptr);
+                                <br> return 0;
+                                <br> }
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="wh">
                     <h3>fgetc function</h3>
@@ -347,16 +379,55 @@
                             </ul>
                         </li>
                     </ul>
+                    <div class="in">
+                        <button class="accordion">code</button>
+                        <div class="panel">
+                            <p>
+                                #include &lt;stdio.h>
+                                <br> int main()
+                                <br> {
+                                <br> FILE *ptr = NULL;
+                                <br> ptr = fopen("myfile2.txt","r");
+                                <br> char c = fgetc(ptr);
+                                <br> printf("The character I got was : %c\n",c);
+                                <br><br>fclose(ptr);
+                                <br> return 0;
+                                <br> }
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="wh">
                     <h3>fgets function</h3>
                     <ul>
                         <li>fgets function is used to write a null terminated string to a file in C
                             <ul>
-                                <li>int fgets(const char *s, FILE *fp)</li>
+                                <li>int fgets(const char *s, int n, FILE *fp)
+                                    <ul>
+                                        <li>int n &rarr; the number of character we wanted to get from the file</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                     </ul>
+                    <div class="in">
+                        <button class="accordion">code</button>
+                        <div class="panel">
+                            <p>
+                                #include &lt;stdio.h>
+                                <br> int main()
+                                <br> {
+                                <br> FILE *ptr = NULL;
+                                <br> ptr = fopen("myfile2.txt","r");
+                                <br> char str[34];
+                                <br> fgets(str, 5, ptr);
+                                <br> printf("The string is : %s\n", str);
+                                <br><br>fclose(ptr);
+                                <br> return 0;
+                                <br> }
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
