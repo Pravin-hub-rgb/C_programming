@@ -99,7 +99,7 @@ body {
 /* ******** Local Stuff *************** */
 
 .content-box {
-    background-color: rgba(0, 180, 216, 0.3);
+    background-color: rgb(23 149 197);
     border-radius: 20px;
     padding: 10px;
     margin: 55px 10px 20px 10px;
@@ -110,7 +110,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    box-shadow: 0 0 20px rgb(0, 183, 255);
+    box-shadow: 0 0 20px rgb(0, 255, 242);
 }
 
 .in {
@@ -130,7 +130,12 @@ body {
 }
 
 body {
-    background-color: #F1FFFA;
+    background: #000428;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #000000;
     margin: 0;
     padding: 0;
