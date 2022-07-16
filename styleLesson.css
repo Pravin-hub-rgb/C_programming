@@ -99,7 +99,7 @@ body {
 /* ******** Local Stuff *************** */
 
 .content-box {
-    background-color: rgb(23 149 197);
+    background-color: rgb(26 164 210);
     border-radius: 20px;
     padding: 10px;
     margin: 55px 10px 20px 10px;
@@ -110,7 +110,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    box-shadow: 0 0 20px rgb(0, 255, 242);
+    box-shadow: 0 0 20px rgb(2 14 82);
 }
 
 .in {
