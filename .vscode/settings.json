@@ -1,3 +1,8 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "files.associations": {
+        "*.ejs": "html",
+        "*.js": "javascriptreact",
+        "stdio.h": "c"
+    }
 }
