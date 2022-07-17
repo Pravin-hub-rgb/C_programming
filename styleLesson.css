@@ -52,7 +52,13 @@ body {
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: #111;
+    /* background-color: #111; */
+    background: #000428;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #004e92, #000428);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -80,6 +86,16 @@ body {
     top: 0;
     right: 25px;
     font-size: 36px;
+}
+
+.sidepanel .botbut {
+    position: absolute;
+    bottom: 90px;
+    width: 98%;
+    /* height: 60px; */
+    /* border: 2px solid red; */
+    text-align: center;
+    color: white;
 }
 
 .openbtn {
