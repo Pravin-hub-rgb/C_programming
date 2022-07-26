@@ -34,7 +34,7 @@
         <div class="inside-content">
             <div class="in">
                 <h2>Program 1 : Generate Multiplication Table of a Given Number</h2>
-                <button class="accordion">Code</button>
+                <button class="accordion">My Practise Code</button>
                 <div class="panel">
                     <p>
                         #include &lt;stdio.h>
@@ -43,7 +43,7 @@
                         <br> int num;
                         <br> printf("Enter the no. whose multiplication table you want :");
                         <br> scanf("%d", &num);
-                        <br> for (int i = 1; i &lt; 11; i++)
+                        <br> for (int i = 1; i &lt;= 10; i++)
                         <br> {
                         <br> printf("%d X %d = %d\n",num,i,num*i);
                         <br> }
@@ -51,6 +51,76 @@
                         <br> return 0;
                         <br> }
                     </p>
+                </div>
+            </div>
+            <div class="in">
+                <h2>Program 2 : Find Sum Of First n Natural Numbers in O(1)</h2>
+                <div class="wh">
+                    <button class="accordion">Normal code</button>
+                    <div class="panel">
+                        <p>
+                            #include &lt;stdio.h>
+                            <br> int main()
+                            <br> {
+                            <br> int num, sum = 0;
+                            <br> printf("Enter the number : ");
+                            <br> scanf("%d", &num);
+                            <br> for (int i = 1; i &lt;= num; i++)
+                            <br> {
+                            <br> sum += i;
+                            <br> }
+                            <br> printf("The sum till %d is = %d",num,sum);
+                            <br> return 0;
+                            <br> }
+                        </p>
+                    </div>
+                    <p>O(n) <br><br> This did the job but its not a efficient way to do it as it have to interate over every single element but we don't want that. And also when n &rarr; &infintie; this algorithm will be slow.</p>
+                </div>
+                <div class="wh">
+                    <p>
+                        we are going to achieve this using a formula and thent he time complexity will be O(1).
+                    </p>
+                    <button class="accordion">simplified code</button>
+                    <div class="panel">
+                        <p>
+                            #include &lt;stdio.h>
+                            <br> int main()
+                            <br> {
+                            <br> int num, sum = 0;
+                            <br> printf("Enter the number : ");
+                            <br> scanf("%d", &num);
+                            <br> sum = ((n*n+n)/2);
+                            <br> printf("The sum till %d is = %d",num,sum);
+                            <br> return 0;
+                            <br> }
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="in">
+                <h2>Program 3 : Find the largest number in an array</h2>
+                <div class="wh">
+                    <button class="accordion">my code</button>
+                    <div class="panel">
+                        <p>
+                            #include &lt;stdio.h>
+                            <br> int main()
+                            <br> {
+                            <br> int arr[] = {1, 4, 6, 3, 47, 1000, 77, 56, 345, 56, 678};
+                            <br> int lar = arr[0];
+                            <br> for (int i = 1; i &lt; (sizeof(arr)) / (sizeof(int)); i++)
+                            <br> {
+                            <br> if (arr[i] > lar)
+                            <br> {
+                            <br> lar = arr[i];
+                            <br> }
+                            <br> }
+                            <br>
+                            <br> printf("The largest element in arr is = %d", lar);
+                            <br> return 0;
+                            <br> }
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
