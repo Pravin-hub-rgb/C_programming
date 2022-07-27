@@ -123,6 +123,42 @@
                     </div>
                 </div>
             </div>
+            <div class="in">
+                <h2>Program 4: Find if a given number is prime or not</h2>
+                <p>
+                    <b>Prime numbers:</b> whose factors are 1 and the number itself.
+                </p>
+                <div class="wh">
+                    <button class="accordion">code</button>
+                    <div class="panel">
+                        <p>
+                            #include &lt;stdio.h>
+                            <br> #include &lt;math.h>
+                            <br> int main()
+                            <br> {
+                            <br> int num = 31, isPrime = 1;
+                            <br> for (int i = 2; i &lt; sqrt(num); i++)
+                            <br> {
+                            <br> if (num % i == 0)
+                            <br> {
+                            <br> isPrime = 0;
+                            <br> }
+                            <br> }
+                            <br> if (isPrime)
+                            <br> {
+                            <br> printf("%d is a prime number\n", num);
+                            <br> }
+                            <br> else
+                            <br> {
+                            <br> printf("%d is not a prime number", num);
+                            <br> }
+                            <br>
+                            <br> return 0;
+                            <br> }
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="../main.js"></script>
